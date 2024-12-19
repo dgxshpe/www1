@@ -44,6 +44,9 @@
             const isDarkMode = localStorage.getItem('darkMode');
             if (isDarkMode === 'true') {
                 document.body.classList.add('dark-mode');
+                document.getElementById('darkModeToggle').checked = true;
+            } else {
+                document.getElementById('darkModeToggle').checked = false;
             }
     
             document.getElementById('darkModeToggle').addEventListener('change', function() {
