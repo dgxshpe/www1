@@ -30,5 +30,23 @@
     <footer>
         &copy; 2023 George David. All rights reserved.
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const isDarkMode = localStorage.getItem('darkMode');
+            if (isDarkMode === 'true') {
+                document.body.classList.add('dark-mode');
+            }
+    
+            document.getElementById('darkModeToggle').addEventListener('change', function() {
+                if (this.checked) {
+                    document.body.classList.add('dark-mode');
+                    localStorage.setItem('darkMode', 'true');
+                } else {
+                    document.body.classList.remove('dark-mode');
+                    localStorage.setItem('darkMode', 'false');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
